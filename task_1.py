@@ -15,3 +15,31 @@
 --- '\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430' - набор кодовых точек
 --- используйте списки и циклы, не дублируйте функции
 """
+
+words = ['разработка', 'сокет', 'декоратор']
+words_online = ['\u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430',
+                '\u0441\u043e\u043a\u0435\u0442',
+                '\u0434\u0435\u043a\u043e\u0440\u0430\u0442\u043e\u0440']
+
+
+def letters():
+    for i in range(len(words)):
+        print(f"Тип {type(words[i])}, содержимое '{words[i]}'")
+
+
+def code_points():
+    for i in range(len(words_online)):
+        print(f"Тип {type(words_online[i])}, содержимое '{words_online[i]}'")
+
+
+def convert_code_points():
+    for word in words:
+        print(f"{word} == {word.encode('unicode_escape').decode()}")
+
+
+print("Вывод буквенного формата")
+letters()
+print("Вывод формата кодовых точек")
+code_points()
+print("Вывод преобразования кодовых точек")
+convert_code_points()

@@ -9,3 +9,14 @@
 --- b'class' - используйте маркировку b''
 --- используйте списки и циклы, не дублируйте функции
 """
+
+words_bytes = [b'class', b'function', b'method']
+
+
+def byte():
+    for i in range(len(words_bytes)):
+        print(
+            f"Тип {type(words_bytes[i])}, содержимое {words_bytes[i]}, длина {len(words_bytes[i])}")
+
+
+byte()
